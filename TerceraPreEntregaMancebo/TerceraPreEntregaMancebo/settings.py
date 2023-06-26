@@ -54,7 +54,7 @@ ROOT_URLCONF = 'TerceraPreEntregaMancebo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["C:/Users/franc/OneDrive/Escritorio/VscodeShiet/TerceraPreEntregaMancebo/TerceraPreEntregaMancebo/plantillas/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

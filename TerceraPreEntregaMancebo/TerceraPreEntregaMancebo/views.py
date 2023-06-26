@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 import datetime
-from django.template import Template, Context
+from django.template import Template, Context, loader
 
 
 def showDia(request):
@@ -8,11 +8,9 @@ def showDia(request):
     return HttpResponse(f"<h1>Hoy es {dia} <h1>")
 
 def templatest(slef):
-    mihtml = open("C:/Users/franc/OneDrive/Escritorio/VscodeShiet/TerceraPreEntregaMancebo/TerceraPreEntregaMancebo/plantillas/template1.html")
-
-    plantilla = Template(mihtml.read())
-    mihtml.close()
-    micontext = Context()
-    documento = plantilla.render(micontext)
+    
+    
+    plantilla = loader.get_template("template1.html")
+    documento = plantilla.render()
     return HttpResponse(documento)
 
