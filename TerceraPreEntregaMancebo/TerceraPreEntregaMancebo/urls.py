@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from TerceraPreEntregaMancebo.views import showDia, templatest
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Saludo/', showDia),
+    path('template1', templatest )
 ]
