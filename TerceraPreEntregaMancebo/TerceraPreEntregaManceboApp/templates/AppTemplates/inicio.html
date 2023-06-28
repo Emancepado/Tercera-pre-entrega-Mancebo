@@ -4,59 +4,62 @@
 
 <head>
 
-    {% load static %}
+  {% load static %}
 
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="{% static 'App/css/derickStyle.css'%}" rel="stylesheet"/>
+  <link href="{% static 'App/css/estilazo.css'%}" rel="stylesheet"/>
 
-    <link href="{% static 'App/css/bootstrap.min.css'%}" rel="stylesheet"/>
+  <link href="{% static 'App/css/bootstrap.min.css'%}" rel="stylesheet"/>
 
-    <script src="{% static 'App/js/bootstrap.min.js'%}"></script>
+  <script src="{% static 'App/js/bootstrap.min.js'%}"></script>
 
-    <title>Inicio|App</title>
+  <title>Inicio|App</title>
 
 </head>
 
 <body>
 
-    <!-- header -->
-
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-
-        <div class="container px-4 px-lg-5">
-
-            <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-
-                Menu
-
-                <i class="fas fa-bars"></i>
-
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-
-                </ul>
-
-            </div>
-
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bienvenido a Facturance!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Historial de ventas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ventas</a>
+            </li>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
         </div>
-
+      </div>
     </nav>
+  {% block ContenidoQueCambia %}
+    
+  {%endblock %}
+
+
+
 
 </body>
 
