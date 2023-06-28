@@ -8,9 +8,6 @@ from django.shortcuts import render
 def inicio(request):
     return render(request, "AppTemplates/inicio.html")
 
-def Cliente(request):
-    return render(request, "AppTemplates/Cliente.html")
-
 def Producto(request):
     return render(request, "AppTemplates/Producto.html")
 

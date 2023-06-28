@@ -2,10 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 #Create your models here
-class Cliente(models.Model):
-    nombre = models.CharField(max_length=40)
-    apellido = models.CharField(max_length=40, default='')
-    email = models.EmailField()
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=40)
