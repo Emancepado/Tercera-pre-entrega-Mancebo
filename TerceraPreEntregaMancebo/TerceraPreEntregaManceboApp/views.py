@@ -17,7 +17,9 @@ def producto(request):
             product.save()
             return redirect(request,'/Producto')
     else:
-        return render(request, '/Producto')
+        miFormulario = formsetProducto()
+        
+    
 
 def Venta(request):
     return render(request, "AppTemplates/Venta.html")
