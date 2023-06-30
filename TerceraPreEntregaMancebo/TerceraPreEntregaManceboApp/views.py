@@ -22,7 +22,8 @@ def producto(request):
             
     
     miFormulario = formsetProducto()
-    return render(request, 'AppTemplates/Producto.html',{'form': miFormulario})
+    productos = Producto.objects.all()
+    return render(request, 'AppTemplates/Producto.html',{'form': miFormulario, 'productos': productos}) 
 
 def getProducto(request):
     return render(request, 'AppTemplates/getProducto.html')
