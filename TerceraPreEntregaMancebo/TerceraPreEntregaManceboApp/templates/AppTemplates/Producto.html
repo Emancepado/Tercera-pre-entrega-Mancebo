@@ -5,17 +5,18 @@
 
 {% block ContenidoQueCambia %}
     <p>Crear producto</p>
-    <!-- <form action={% url 'Producto' %} method="post"> 
-        {% csrf_token %}
+     <form action={% url 'Producto' %} method="post"> 
+      <!--  {% csrf_token %}
         <input placeholder="Nombre de Producto" type= "text" name="nombre" required>
         <input placeholder="Stock" type= "number" name="stock">
         <input placeholder="Precio" type="number" name="price">
         <input placeholder="Descripcion" type= "text" name="description">
         <input type="submit" value="Enviar">
-    </form> -->
-    <table>
-        {{formsetProducto.as_table}}
-    </table>
+    -->
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+    </form> 
 {% endblock %}
 
 
