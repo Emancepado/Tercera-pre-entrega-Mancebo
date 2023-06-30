@@ -16,8 +16,9 @@ def producto(request):
             product = Producto(nombre=data["nombre"], stock= data["stock"], price= data["price"], description = request.POST["description"])
             product.save()
             return redirect(request,'/Producto')
-    else:
-        miFormulario = formsetProducto()
+    
+    miFormulario = formsetProducto()
+    return render(request, 'AppTemplates/Producto.html',{'form': miFormulario})
         
     
 
