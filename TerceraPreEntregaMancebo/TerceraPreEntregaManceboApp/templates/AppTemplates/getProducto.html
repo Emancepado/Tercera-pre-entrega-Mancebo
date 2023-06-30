@@ -1,0 +1,22 @@
+
+{% extends "AppTemplates/base.html" %}
+
+{% load static %}  
+
+{% block getProducto %}
+    <p>Lista de Productos</p>
+    <div> class= "formGetProducto"
+
+    </div>
+
+
+    {% if productos %}
+        <h2>Lista de Productos</h2>
+        <ul>
+            {% for producto in productos %}
+                <li>{{ producto.nombre }} - Stock: {{ producto.stock }} - Precio: {{ producto.price }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+{% endblock %}

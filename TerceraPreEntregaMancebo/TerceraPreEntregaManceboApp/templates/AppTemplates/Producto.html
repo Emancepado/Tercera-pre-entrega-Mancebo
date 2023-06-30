@@ -11,14 +11,10 @@
             {{form.as_table}}
         </table>
         <input type="submit" value="Enviar">
-        <!--
-        <input placeholder="Nombre de Producto" type= "text" name="nombre" required>
-        <input placeholder="Stock" type= "number" name="stock">
-        <input placeholder="Precio" type="number" name="price">
-        <input placeholder="Descripcion" type= "text" name="description">
-    -->
         
-    </form> 
+    </form>
+    {% block getProducto %} 
+    {% endblock %}
 {% endblock %}
 
 

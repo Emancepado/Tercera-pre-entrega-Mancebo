@@ -6,6 +6,7 @@ urlpatterns = [
     path('Venta/', views.Venta, name='Venta' ),
     path('DetalleVenta/', views.DetalleVenta, name='DetalleVenta'),
     path('Producto/', views.producto, name='Producto'),
+    path('getProducto/', views.getProducto, name='getProducto'),
     
 ]
 

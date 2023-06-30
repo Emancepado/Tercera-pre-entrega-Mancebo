@@ -2,6 +2,7 @@
 from django.shortcuts import render, redirect
 from TerceraPreEntregaManceboApp.models import Producto
 from TerceraPreEntregaManceboApp.forms import formsetProducto
+from django.contrib import messages
 # Create your views here.
 
 def inicio(request):
@@ -15,10 +16,17 @@ def producto(request):
             data = miFormulario.cleaned_data
             product = Producto(nombre=data["nombre"], stock= data["stock"], price= data["price"], description = request.POST["description"])
             product.save()
-            return redirect(request,'/Producto')
+            messages.success(request, "Producto registrado exitosamente") 
+            return redirect('Producto')
+            
+            
     
     miFormulario = formsetProducto()
     return render(request, 'AppTemplates/Producto.html',{'form': miFormulario})
+
+def getProducto(request):
+    return render(request, 'AppTemplates/getProducto.html')
+
         
     
 
