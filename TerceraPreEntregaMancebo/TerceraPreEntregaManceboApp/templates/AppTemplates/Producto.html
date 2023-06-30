@@ -5,9 +5,9 @@
 
 {% block ContenidoQueCambia %}
     <p>Crear producto</p>
-    <form action="Producto/" method="post"> 
+    <form action="/App/Producto/" method="post"> 
         {% csrf_token %}
-        <input placeholder="Nombre de Producto" type= "text" name="nombre">
+        <input placeholder="Nombre de Producto" type= "text" name="nombre" required>
         <input placeholder="Stock" type= "number" name="stock">
         <input placeholder="Precio" type="number" name="price">
         <input placeholder="Descripcion" type= "text" name="description">

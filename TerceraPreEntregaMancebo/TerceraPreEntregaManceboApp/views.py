@@ -9,8 +9,8 @@ def inicio(request):
 
 def Producto(request):
     if request.method == 'POST':
-        Producto = Producto(nombre=request.POST["nombre"], stock= request.POST["stock"], price= request.POST["price"], description = request.POST["description"])
-        Producto.save()
+        Product = Producto(nombre=request.POST["nombre"], stock= request.POST["stock"], price= request.POST["price"], description = request.POST["description"])
+        Product.save()
         return render(request, "AppTemplates/Producto.html")
     return render(request, "AppTemplates/Producto.html")
 
