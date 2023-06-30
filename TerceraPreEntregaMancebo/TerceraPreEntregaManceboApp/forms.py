@@ -7,4 +7,3 @@ class formsetProducto(forms.Form):
     stock = forms.FloatField()
     price = forms.DecimalField(max_digits=8, decimal_places=2)
     description = forms.CharField(max_length=80)
-    createdAt = forms.DateTimeField(default=timezone.now)
