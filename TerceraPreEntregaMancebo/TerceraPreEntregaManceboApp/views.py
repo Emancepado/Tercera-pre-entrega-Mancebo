@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
 from django.shortcuts import render
+from TerceraPreEntregaManceboApp.models import Producto
 
 # Create your views here.
 
@@ -9,6 +8,10 @@ def inicio(request):
     return render(request, "AppTemplates/inicio.html")
 
 def Producto(request):
+    if request.method == 'POST':
+        Producto = Producto(nombre=request.POST["nombre"], stock= request.POST["stock"], price= request.POST["price"], description = request.POST["description"])
+        Producto.save()
+        return render(request, "AppTemplates/Producto.html")
     return render(request, "AppTemplates/Producto.html")
 
 def Venta(request):

@@ -5,3 +5,4 @@ class Cliente(models.Model):
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=40, default='')
     email = models.EmailField()
+
