@@ -1,18 +1,23 @@
-from django.shortcuts import render
-from django.shortcuts import render
-from TerceraPreEntregaManceboApp.models import Producto
 
+from django.shortcuts import render, redirect
+from TerceraPreEntregaManceboApp.models import Producto
+from TerceraPreEntregaManceboApp.forms import formsetProducto
 # Create your views here.
 
 def inicio(request):
     return render(request, "AppTemplates/inicio.html")
 
-def Producto(request):
+def producto(request):
     if request.method == 'POST':
-        Product = Producto(nombre=request.POST["nombre"], stock= request.POST["stock"], price= request.POST["price"], description = request.POST["description"])
-        Product.save()
-        return render(request, "AppTemplates/Producto.html")
-    return render(request, "AppTemplates/Producto.html")
+        miFormulario = formsetProducto(request.POST)
+        print(miFormulario)
+        if miFormulario.is_valid:
+            data = miFormulario.cleaned_data
+            product = Producto(nombre=data["nombre"], stock= data["stock"], price= data["price"], description = request.POST["description"])
+            product.save()
+            return redirect(request,'/Producto')
+    else:
+        return render(request, '/Producto')
 
 def Venta(request):
     return render(request, "AppTemplates/Venta.html")
