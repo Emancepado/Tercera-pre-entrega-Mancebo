@@ -22,7 +22,8 @@ def getProducto(request):
     return render(request, 'AppTemplates/getProducto.html', {'productos': productos})
 
 def Venta(request):
-    return render(request, "AppTemplates/Venta.html")
+    ventas = DetalleVenta.objects.all()
+    return render(request, "AppTemplates/Venta.html", {'ventas': ventas})
 
 def DetalleVenta_form(request):
     if request.method == 'POST':
