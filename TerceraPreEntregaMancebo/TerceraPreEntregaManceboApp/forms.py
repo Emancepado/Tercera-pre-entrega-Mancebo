@@ -1,9 +1,12 @@
 from django import forms
-from django.utils import timezone
+from .models import DetalleVenta, Producto
 
+class ProductoForm(forms.ModelForm):
+    class Meta:
+        model = Producto
+        fields = ['nombre', 'stock', 'price', 'description']
 
-class formsetProducto(forms.Form):
-    nombre = forms.CharField(max_length=40)
-    stock = forms.FloatField()
-    price = forms.DecimalField(max_digits=8, decimal_places=2)
-    description = forms.CharField(max_length=80)
+class DetalleVentaForm(forms.ModelForm):
+    class Meta:
+        model = DetalleVenta
+        fields = ['producto', 'cantidad']
