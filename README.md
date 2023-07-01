@@ -54,6 +54,8 @@ Haz clic en el botón "Agregar producto" para registrar un nuevo producto.
 Ingresa los detalles del producto y guarda los cambios.
 Busca productos:
 
-Utiliza la barra de búsqueda en la
+En la pestaña de ventas podras encontrar la lista de los productos.
+En la url http://127.0.0.1:8000/TerceraPreEntregaManceboApp/getProducto/ tambien se pueden ver (a esta url accedes mediante la redireccion de la carga de un producto) 
 
+Accede a la seccion "Historial de ventas" para ver una tabla con el historial de las ventas.
 
