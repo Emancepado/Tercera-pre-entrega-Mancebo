@@ -11,24 +11,25 @@ def inicio(request):
 def producto(request):
     if request.method == 'POST':
         miFormulario = formsetProducto(request.POST)
-        print(miFormulario)
-        if miFormulario.is_valid:
+        if miFormulario.is_valid():
             data = miFormulario.cleaned_data
-            product = Producto(nombre=data["nombre"], stock= data["stock"], price= data["price"], description = request.POST["description"])
+            product = Producto(
+                nombre=data["nombre"],
+                stock=data["stock"],
+                price=data["price"],
+                description=request.POST["description"]
+            )
             product.save()
             messages.success(request, "Producto registrado exitosamente") 
-            return redirect('Producto')
-            
-            
-    
+            return redirect('getProducto')  # Redirige a la vista getProducto
+
     miFormulario = formsetProducto()
-    productos = Producto.objects.all()
-    return render(request, 'AppTemplates/Producto.html',{'form': miFormulario, 'productos': productos}) 
+    return render(request, 'AppTemplates/Producto.html', {'form': miFormulario})
 
 def getProducto(request):
-    return render(request, 'AppTemplates/getProducto.html')
-
-        
+    productos = Producto.objects.all()
+    return render(request, 'AppTemplates/getProducto.html', {'productos': productos} )  
+    
     
 
 def Venta(request):
