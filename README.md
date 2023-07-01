@@ -8,7 +8,7 @@ El proyecto principal se denomina "TerceraPreEntregaMancebo" y consta de dos apl
 
 TerceraPreEntregaManceboApp: Esta aplicación contiene los modelos de productos, detalles de ventas y ventas. Aquí se gestionan las funcionalidades relacionadas con el registro de productos y el seguimiento de las ventas.
 
-Clientes: Esta aplicación se encarga del registro de clientes. Aquí se pueden agregar, editar y eliminar los datos de los clientes.
+Clientes: Esta aplicación se encarga del registro de clientes. Aquí se pueden agregar los datos de los clientes.
 
 Requisitos previos
 Python 3.7 o superior
